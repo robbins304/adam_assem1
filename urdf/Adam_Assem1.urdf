@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Adam_Assem1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.059542072370369 0.0356483765950732 -0.0233150462329552"
+        rpy="0 0 0" />
+      <mass
+        value="16.4252793734974" />
+      <inertia
+        ixx="0.55749272397669"
+        ixy="0.00232592968602603"
+        ixz="-0.000725423995296264"
+        iyy="0.673048751975987"
+        iyz="-0.0273284884879403"
+        izz="1.16575541561121" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Adam_Assem1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Adam_Assem1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rear_wheel2">
+    <inertial>
+      <origin
+        xyz="-0.522832562056461 0.524509049244007 -0.271623574689137"
+        rpy="0 0 0" />
+      <mass
+        value="7.51671054794239" />
+      <inertia
+        ixx="0.168722777874011"
+        ixy="0.000349200510187432"
+        ixz="0.00135685348204446"
+        iyy="0.0882587130955659"
+        iyz="-3.50627079694679E-06"
+        izz="0.0883054027771902" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Adam_Assem1/meshes/rear_wheel2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Adam_Assem1/meshes/rear_wheel2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 -0.006357" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_wheel2" />
+    <axis
+      xyz="0.014413 0.99333 -0.11438" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="rear_wheel1">
+    <inertial>
+      <origin
+        xyz="0.387243393897938 0.523220721223987 -0.263740072649743"
+        rpy="0 0 0" />
+      <mass
+        value="7.5167105479424" />
+      <inertia
+        ixx="0.168624960017716"
+        ixy="0.00198160529183376"
+        ixz="0.00242794730659346"
+        iyy="0.0883341721498838"
+        iyz="5.669432888809E-05"
+        izz="0.0883277615791685" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Adam_Assem1/meshes/rear_wheel1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Adam_Assem1/meshes/rear_wheel1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 -0.006357" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_wheel1" />
+    <axis
+      xyz="0.014413 0.99333 -0.11438" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="front_wheel2">
+    <inertial>
+      <origin
+        xyz="0.392276960623307 -0.560921255355041 -0.264800683389676"
+        rpy="0 0 0" />
+      <mass
+        value="7.51671054794238" />
+      <inertia
+        ixx="0.168719554849781"
+        ixy="0.00121290961282988"
+        ixz="0.000866894746966951"
+        iyy="0.0882958150504655"
+        iyz="-7.03713407160277E-07"
+        izz="0.0882715238465202" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Adam_Assem1/meshes/front_wheel2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Adam_Assem1/meshes/front_wheel2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 -0.006357" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_wheel2" />
+    <axis
+      xyz="0.014413 0.99333 -0.11438" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="front_wheel1">
+    <inertial>
+      <origin
+        xyz="-0.515702986013468 -0.581479316577731 -0.262495898839036"
+        rpy="0 0 0" />
+      <mass
+        value="7.51671054794237" />
+      <inertia
+        ixx="0.168732317153036"
+        ixy="-0.00108064581937818"
+        ixz="0.000166745700160991"
+        iyy="0.0882985323699084"
+        iyz="-9.17042277629758E-06"
+        izz="0.0882560442238228" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Adam_Assem1/meshes/front_wheel1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Adam_Assem1/meshes/front_wheel1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 -0.006357" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_wheel1" />
+    <axis
+      xyz="0.014413 0.99333 -0.11438" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+</robot>
