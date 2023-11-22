@@ -4,7 +4,7 @@ project(urdf_tutorial)
 find_package(ament_cmake REQUIRED)
 
 install(
-  DIRECTORY images launch meshes rviz urdf
+  DIRECTORY dir config launch meshes urdf
   DESTINATION share/${PROJECT_NAME}
 )
 
