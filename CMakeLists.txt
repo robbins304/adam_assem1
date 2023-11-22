@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(urdf_tutorial)
+project(adam_assem1)
 
 find_package(ament_cmake REQUIRED)
 
