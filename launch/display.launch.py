@@ -12,7 +12,7 @@ def generate_launch_description():
     robot_state_publisher_node = launch_ros.actions.Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
-        parameters=[{'robot_description': launch_ros.descriptions(Command(['xacro ', LaunchConfiguration('model')]))}]
+        parameters=[{'robot_description': launch_ros.descriptions.ParameterValue(Command(['xacro ', LaunchConfiguration('model')]), value_type=str)}]
     )
     joint_state_publisher_node = launch_ros.actions.Node(
         package='joint_state_publisher',
