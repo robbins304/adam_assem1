@@ -19,9 +19,9 @@ def generate_launch_description():
   gazebo_models_path = 'models'
   package_name = 'adam_assem1'
   robot_name_in_model = 'adam_assem1'
-  rviz_config_file_path = 'rviz/urdf_gazebo_config.rviz'
+  rviz_config_file_path = 'rviz/urdf.rviz'
   urdf_file_path = 'urdf/adam_assem1.urdf'
-  # world_file_path = 'worlds/neighborhood.world'
+  world_file_path = 'worlds/neighborhood.world'
      
   # Pose where we want to spawn the robot
   spawn_x_val = '0.0'
@@ -36,7 +36,7 @@ def generate_launch_description():
   pkg_share = FindPackageShare(package=package_name).find(package_name)
   default_urdf_model_path = os.path.join(pkg_share, urdf_file_path)
   default_rviz_config_path = os.path.join(pkg_share, rviz_config_file_path)
-  # world_path = os.path.join(pkg_share, world_file_path)
+  world_path = os.path.join(pkg_share, world_file_path)
   gazebo_models_path = os.path.join(pkg_share, gazebo_models_path)
   os.environ["GAZEBO_MODEL_PATH"] = gazebo_models_path
    
@@ -51,7 +51,7 @@ def generate_launch_description():
   use_rviz = LaunchConfiguration('use_rviz')
   use_sim_time = LaunchConfiguration('use_sim_time')
   use_simulator = LaunchConfiguration('use_simulator')
-  # world = LaunchConfiguration('world')
+  world = LaunchConfiguration('world')
    
   # Declare the launch arguments  
   declare_use_joint_state_publisher_cmd = DeclareLaunchArgument(
@@ -104,10 +104,10 @@ def generate_launch_description():
     default_value='True',
     description='Whether to start the simulator')
  
-  # declare_world_cmd = DeclareLaunchArgument(
-    # name='world',
-    # default_value=world_path,
-    # description='Full path to the world model file to load')
+  declare_world_cmd = DeclareLaunchArgument(
+    name='world',
+    default_value=world_path,
+    description='Full path to the world model file to load')
    
   # Subscribe to the joint states of the robot, and publish the 3D pose of each link.    
   start_robot_state_publisher_cmd = Node(
